@@ -27,9 +27,9 @@ jobs:
       - name: Build and Push Frontend Image
         run: |
           docker build -t $DOCKERHUB_USERNAME/kube_eksamen-frontend:$IMAGE_TAG ./front-end-kubernetes/
-          docker push $DOCKERHUB_USERNAME/kube_eksamen-frontend:$IMAGE_TAG,
+          docker push $DOCKERHUB_USERNAME/kube_eksamen-frontend:$IMAGE_TAG
       
       - name: Build and Push Backend Image
         run: |
-          docker build -t $DOCKERHUB_USERNAME/kube_eksamen-backend:$IMAGE_TAG ./
+          docker build -t $DOCKERHUB_USERNAME/kube_eksamen-backend:$IMAGE_TAG .
           docker push $DOCKERHUB_USERNAME/kube_eksamen-backend:$IMAGE_TAG
