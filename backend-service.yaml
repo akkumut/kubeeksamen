@@ -9,4 +9,4 @@ spec:
   ports:
   - port: 3000
     targetPort: 3000
-    nodePort: 30081   # Du åbner din app via http://<minikube-ip>:30080
+    nodePort: 30081  
