@@ -24,4 +24,10 @@ spec:
             secretKeyRef:
               name: mongo-secret
               key: MONGO_URI
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "250m"
+
 
