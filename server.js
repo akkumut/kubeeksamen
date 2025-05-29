@@ -2,20 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
-const mongoURI = process.env.MONGO_URI | 'mongodb://localhost:27017/bilDB';
-
-
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/bilDB';
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 
-
 // MongoDB connection
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch(err => console.error('❌ Error connecting to database:', err));
 
